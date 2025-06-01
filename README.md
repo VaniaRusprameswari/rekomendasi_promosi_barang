@@ -20,6 +20,6 @@ Proyek ini adalah aplikasi Python berbasis AI sederhana yang menganalisis data p
 - Scikit-Learn (Linear Regression)
 
 ## 👩‍💻 Kontributor
-Nama: VANIA RUSPRAMESWARI
-NIM: 23050974073
-Mata Pelajaran: Kecerdasan Buatan (AI)
+- Nama: VANIA RUSPRAMESWARI
+- NIM: 23050974073
+- Mata Pelajaran: Kecerdasan Buatan (AI)
