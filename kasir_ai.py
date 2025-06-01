@@ -3,7 +3,6 @@ import numpy as np
 from datetime import datetime
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.exceptions import NotFittedError
 from sklearn.preprocessing import StandardScaler
 import warnings
 
@@ -43,11 +42,11 @@ def evaluasi_tren(mingguan):
 
 def beri_skor(margin, prediksi, stok):
     skor = 0
-    if margin > 20:
+    if margin >= MIN_MARGIN:
         skor += 1
-    if prediksi >= stok * 0.5:
+    if prediksi <= stok * 0.3:
         skor += 1
-    if stok > 0:
+    if stok > 5:
         skor += 1
     return SKALA_SKOR[min(skor, len(SKALA_SKOR) - 1)]
 
@@ -85,21 +84,24 @@ for barang_id in df['id_barang'].unique():
         prediksi = model_prediksi_ai(X, y, next_index=max(minggu_ke) + 1)
     except Exception as e:
         print(f"[⚠️ AI Error] Prediksi gagal untuk {info['nama_barang']}: {e}")
-    
+
     # Fallback prediksi jika model gagal
     if prediksi is None or prediksi < 0:
         prediksi = int(rata2_mingguan * 1.5)
 
     skor_promosi = beri_skor(margin, prediksi, info['stok'])
 
+    # Kriteria barang rentan atau pernah dipromosikan (dummy check)
+    kategori_rentan = info['kategori'].lower() in ['makanan', 'makanan cepat saji', 'sayuran']
+
     # Rekomendasi Promosi
-    if skor_promosi in ['Tinggi', 'Sedang']:
+    if skor_promosi in ['Tinggi', 'Sedang'] and trend in ['Menurun', 'Stabil'] and kategori_rentan:
         diskon_opt = min(margin, 20)
         harga_promo = int(info['harga_jual'] * (1 - diskon_opt / 100))
         hari_terbaik = data_barang['tanggal'].dt.day_name().mode()[0]
 
         print("\n==============================")
-        print("  📦 REKOMENDASI PROMOSI BARANG")
+        print("📦 REKOMENDASI PROMOSI BARANG")
         print("==============================")
         print(f"ID Barang       : {barang_id}")
         print(f"Nama            : {info['nama_barang']}")
@@ -112,5 +114,5 @@ for barang_id in df['id_barang'].unique():
         print(f"🟢 DISKON OPTIMAL : {diskon_opt:.0f}% → Harga Promo: Rp{harga_promo}")
         print(f"📅 Hari Terbaik Promo: {hari_terbaik}")
     else:
-        print(f"\n[Info] Barang {info['nama_barang']} tidak layak dipromosikan saat ini.")
-        print(f"→ Tren: {trend}, Margin: {margin:.1f}%, Prediksi: {prediksi} pcs, Skor: {skor_promosi}")
+        print(f"\n🔴 Barang '{info['nama_barang']}' *tidak layak dipromosikan* saat ini.")
+        print(f"ℹ️ Alasan: Tren: {trend}, Margin: {margin:.1f}%, Prediksi: {prediksi} pcs, Stok: {info['stok']}")

@@ -1,12 +1,20 @@
-# 💡 Kasir Pintar: Asisten Promosi Barang Berbasis Data Penjualan
-Proyek ini adalah aplikasi Python berbasis AI sederhana yang menganalisis data penjualan mingguan dan memberikan rekomendasi promosi barang berdasarkan margin keuntungan, tren penjualan, prediksi permintaan, dan stok barang.
+# 💡 Sistem Rekomendasi Promosi Barang Berbasis Data Penjualan (Learning)
+Proyek ini adalah aplikasi Python berbasis AI sederhana yang menganalisis data penjualan mingguan dan memberikan **rekomendasi promosi barang** berdasarkan margin keuntungan, tren penjualan, prediksi permintaan, dan stok barang. Sistem ini memanfaatkan machine learning dan analisis data untuk membantu toko menentukan barang mana yang layak dipromosikan dan bagaimana strategi diskon terbaiknya.
 
 ## 🚀 Fitur Utama
-- 📊 Analisis Tren Penjualan: Menggunakan regresi linear untuk mengevaluasi tren penjualan barang per minggu.
-- 🧠 Prediksi Permintaan: Memperkirakan jumlah penjualan minggu berikutnya.
-- 📦 Skor Promosi: Memberi skor kelayakan promosi berdasarkan margin, stok, dan prediksi permintaan.
-- 🎯 Rekomendasi Diskon: Menentukan diskon optimal dan hari terbaik untuk promosi.
-- 📢 Notifikasi Informasi: Menampilkan peringatan jika barang belum layak dipromosikan.
+- 📊 **Prediksi Penjualan** menggunakan algoritma *Random Forest Regressor*
+- 📈 **Evaluasi Tren Penjualan Mingguan** (Menurun / Stabil / Meningkat)
+- 💰 **Penghitungan Margin Kotor** secara otomatis
+- 🧮 **Skoring Kelayakan Promosi** berdasarkan margin, prediksi, dan stok
+- ✅ **Rekomendasi Diskon Optimal** dan **Hari Terbaik Promosi**
+- ❌ **Penyaringan Otomatis Barang Tidak Layak Promosi**
+
+## 📌 Logika Rekomendasi Promosi
+Sebuah barang direkomendasikan untuk dipromosikan jika memenuhi semua kriteria berikut:
+1. **Kategori Rentan**: Termasuk kategori makanan, makanan cepat saji, atau sayuran
+2. **Skor Promosi Sedang atau Tinggi**
+3. **Tren Penjualan Menurun atau Stabil**
+Barang yang tidak memenuhi akan diberikan penjelasan singkat alasan penolakannya.
 
 ## 🛠️ Cara Menjalankan
 1. Pastikan Python 3 sudah terinstal
@@ -20,6 +28,6 @@ Proyek ini adalah aplikasi Python berbasis AI sederhana yang menganalisis data p
 - Scikit-Learn (Linear Regression)
 
 ## 👩‍💻 Kontributor
-Nama: VANIA RUSPRAMESWARI
-NIM: 23050974073
-Mata Pelajaran: Kecerdasan Buatan (AI)
+- Nama: VANIA RUSPRAMESWARI
+- NIM: 23050974073
+- Mata Pelajaran: Kecerdasan Buatan (AI)
