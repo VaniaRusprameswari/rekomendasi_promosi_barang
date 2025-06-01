@@ -1,4 +1,4 @@
-# 💡 Kasir Pintar: Asisten Promosi Barang Berbasis Data Penjualan
+# 💡 Sistem Rekomendasi Promosi Barang Berbasis Data Penjualan (Learning)
 Proyek ini adalah aplikasi Python berbasis AI sederhana yang menganalisis data penjualan mingguan dan memberikan rekomendasi promosi barang berdasarkan margin keuntungan, tren penjualan, prediksi permintaan, dan stok barang.
 
 ## 🚀 Fitur Utama
@@ -28,6 +28,6 @@ Barang yang tidak memenuhi akan diberikan penjelasan singkat alasan penolakannya
 - Scikit-Learn (Linear Regression)
 
 ## 👩‍💻 Kontributor
-Nama: VANIA RUSPRAMESWARI
-NIM: 23050974073
-Mata Pelajaran: Kecerdasan Buatan (AI)
+- Nama: VANIA RUSPRAMESWARI
+- NIM: 23050974073
+- Mata Pelajaran: Kecerdasan Buatan (AI)
