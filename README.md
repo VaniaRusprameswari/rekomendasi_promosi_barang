@@ -1,5 +1,9 @@
 # 💡 Sistem Rekomendasi Promosi Barang Berbasis Data Penjualan (Learning)
+<<<<<<< HEAD
 Proyek ini adalah aplikasi Python berbasis AI sederhana yang menganalisis data penjualan mingguan dan memberikan **rekomendasi promosi barang** berdasarkan margin keuntungan, tren penjualan, prediksi permintaan, dan stok barang. Sistem ini memanfaatkan machine learning dan analisis data untuk membantu toko menentukan barang mana yang layak dipromosikan dan bagaimana strategi diskon terbaiknya.
+=======
+Proyek ini adalah aplikasi Python berbasis AI sederhana yang menganalisis data penjualan mingguan dan memberikan rekomendasi promosi barang berdasarkan margin keuntungan, tren penjualan, prediksi permintaan, dan stok barang.
+>>>>>>> 3f49ae00f49f04d4e98a12c31547cfbaef2a3f43
 
 ## 🚀 Fitur Utama
 - 📊 **Prediksi Penjualan** menggunakan algoritma *Random Forest Regressor*
@@ -30,4 +34,8 @@ Barang yang tidak memenuhi akan diberikan penjelasan singkat alasan penolakannya
 ## 👩‍💻 Kontributor
 - Nama: VANIA RUSPRAMESWARI
 - NIM: 23050974073
+<<<<<<< HEAD
 - Mata Pelajaran: Kecerdasan Buatan (AI)
+=======
+- Mata Pelajaran: Kecerdasan Buatan (AI)
+>>>>>>> 3f49ae00f49f04d4e98a12c31547cfbaef2a3f43
