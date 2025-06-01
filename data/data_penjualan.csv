@@ -1,0 +1,10 @@
+id_barang,nama_barang,kategori,harga_beli,harga_jual,stok,tanggal,jumlah
+BRG001,Mi Instan Ayam,Makanan,3000,3200,40,2025-05-21,6
+BRG001,Mi Instan Ayam,Makanan,3000,3200,40,2025-05-28,3
+BRG001,Mi Instan Ayam,Makanan,3000,3200,40,2025-06-01,1
+BRG002,Sabun Mandi,Toiletries,3000,4500,20,2025-05-22,4
+BRG002,Sabun Mandi,Toiletries,3000,4500,20,2025-05-29,6
+BRG002,Sabun Mandi,Toiletries,3000,4500,20,2025-06-01,8
+BRG003,Cleo 800 ml,Minuman,4000,4200,50,2025-05-20,10
+BRG003,Cleo 800 ml,Minuman,4000,4200,50,2025-05-27,6
+BRG003,Cleo 800 ml,Minuman,4000,4200,50,2025-06-01,2
